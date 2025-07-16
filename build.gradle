@@ -75,11 +75,11 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             artifact tasks.named('shadowJar').get()
-            artifactId = 'mcengine-placeholder-api'
+            artifactId = 'placeholder-api'
 
             pom {
                 name.set(project.jarName)
-                description.set("The ${project.jarName} API is designed for use by AddOns, DLCs, and other plugins.")
+                description.set("The ${project.jarName} API is designed for use by extension, and other plugins.")
                 url.set("https://github.com/${project.organization_name}/${project.repository_name}")
 
                 scm {
