@@ -44,18 +44,9 @@ repositories {
 
     maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
     maven { url = 'https://oss.sonatype.org/content/repositories/central' }
-
-    maven {
-        url = uri("https://maven.pkg.github.com/MCEngine/core-api")
-        credentials {
-            username = project.user_git_name
-            password = project.user_github_token ?: project.repository_token ?: project.organization_token
-        }
-    }
 }
 
 dependencies {
-    implementation 'io.github.mcengine:core-api:2025.0.8-16'
     compileOnly 'com.google.code.gson:gson:2.13.1'
     compileOnly 'org.spigotmc:spigot-api:1.21.7-R0.1-SNAPSHOT'
 }

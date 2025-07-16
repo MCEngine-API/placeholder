@@ -16,43 +16,8 @@ import java.util.function.Function;
  */
 public class MCEnginePlaceholderApi {
 
-    // Static instance for singleton access
-    private static MCEnginePlaceholderApi instance;
-
-    // Reference to the plugin using this API
-    private final Plugin plugin;
-
     // Map to store placeholder keys and their corresponding function
     private static final Map<String, Function<Player, String>> placeholders = new HashMap<>();
-
-    /**
-     * Constructs the placeholder API instance and links it to the given plugin.
-     * This should be initialized once from the core or central plugin (e.g., MCEngine).
-     *
-     * @param plugin The Bukkit plugin instance using this API.
-     */
-    public MCEnginePlaceholderApi(Plugin plugin) {
-        instance = this;
-        this.plugin = plugin;
-    }
-
-    /**
-     * Gets the global API singleton instance.
-     *
-     * @return The {@link MCEnginePlaceholderApi} instance.
-     */
-    public static MCEnginePlaceholderApi getApi() {
-        return instance;
-    }
-
-    /**
-     * Gets the plugin instance that initialized this API.
-     *
-     * @return The {@link Plugin} linked to this API.
-     */
-    public Plugin getPlugin() {
-        return plugin;
-    }
 
     /**
      * Registers a placeholder.
