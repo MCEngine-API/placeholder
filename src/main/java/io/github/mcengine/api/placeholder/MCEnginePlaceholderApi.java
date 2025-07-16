@@ -8,22 +8,24 @@ import java.util.Map;
 import java.util.function.Function;
 
 /**
- * The MCEnginePlaceholderApi class provides a centralized system
+ * The {@code MCEnginePlaceholderApi} class provides a centralized system
  * for registering and translating placeholders across all MCEngine plugins.
  *
- * Plugins can register their own placeholders using a key and a resolver function.
- * These placeholders can then be dynamically replaced in messages using player context.
+ * <p>Plugins can register their own placeholders using a key and a resolver function.
+ * These placeholders can then be dynamically replaced in messages using the player context.</p>
  */
 public class MCEnginePlaceholderApi {
 
-    // Map to store placeholder keys and their corresponding function
+    /**
+     * A map to store placeholder keys and their corresponding resolver functions.
+     */
     private static final Map<String, Function<Player, String>> placeholders = new HashMap<>();
 
     /**
      * Registers a placeholder.
      *
-     * @param key      The placeholder key, e.g. "%mcengine_currency%"
-     * @param resolver A function that takes a Player and returns the value for that placeholder
+     * @param key      The placeholder key, e.g. {@code "%mcengine_currency%"}
+     * @param resolver A function that takes a {@link Player} and returns the value for that placeholder
      */
     public static void registerPlaceholder(String key, Function<Player, String> resolver) {
         placeholders.put(key, resolver);
