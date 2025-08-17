@@ -3,15 +3,29 @@ package io.github.mcengine.api.placeholder.extension.library;
 import org.bukkit.plugin.Plugin;
 
 /**
- * Interface for Library modules that can be dynamically loaded
- * as part of the Placeholder system in MCEngine.
+ * Represents a Placeholder-based Library module that can be dynamically loaded into the MCEngine.
+ * <p>
+ * Implement this interface to provide placeholder-related library support to the system.
  */
 public interface IMCEnginePlaceholderLibrary {
-
     /**
-     * Called when the Library module is loaded by the AI engine.
+     * Called when the Placeholder Library is loaded by the engine.
      *
      * @param plugin The plugin instance providing context.
      */
     void onLoad(Plugin plugin);
+
+    /**
+     * Called when the Library is unloaded or disabled by the engine.
+     *
+     * @param plugin The plugin instance providing context.
+     */
+    void onDisload(Plugin plugin);
+
+    /**
+     * Sets a unique ID for this Placeholder Library instance.
+     *
+     * @param id The unique ID assigned by the engine.
+     */
+    void setId(String id);
 }
