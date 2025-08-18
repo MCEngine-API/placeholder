@@ -1,4 +1,3 @@
-# ℹ️ Information
+# Information 📖
 
-This repository is created as a **PlaceholderAPI** 🎯.  
-It allows you to use placeholders in config files and register them with various plugins seamlessly 🔌✨.
+Info on [`website`](https://mcengine-website.github.io/placeholder/api/)
